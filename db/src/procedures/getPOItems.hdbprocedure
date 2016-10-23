@@ -1,0 +1,15 @@
+PROCEDURE "dev.db.procedures::getPOItems" (
+    OUT ex_addresses "dev.db.data::PurchaseOrder.Item" )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   READS SQL DATA AS
+BEGIN
+   /*************************************
+       Write your procedure logic 
+   *************************************/
+   ex_addresses = 
+     select *
+              from "dev.db.data::PurchaseOrder.Item";
+
+END

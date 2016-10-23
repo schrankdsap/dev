@@ -1,0 +1,32 @@
+{
+	"role":{
+		"name": "dev.db.roles::dev",
+		"object_privileges":[
+			{
+				"name": "dev.db.data::PurchaseOrder.Header",
+				"type": "TABLE",
+				"privileges": [ "SELECT" ]
+			},
+			{
+				"name": "dev.db.data::PurchaseOrder.Item",
+				"type": "TABLE",
+				"privileges": [ "SELECT" ]
+			},
+			{
+				"name": "dev.db.procedures::getPOItems",
+				"type": "PROCEDURE",
+				"privileges": [ "EXECUTE" ]
+			},
+			{
+				"name": "dev.db.data::PurchaseOrder.ItemView",
+				"type": "VIEW",
+				"privileges": [ "SELECT" ]
+			}		
+		],
+		"schema_analytic_privileges": [
+            {
+                "privileges":[ "dev.db.roles::PO_VIEW_PRIVILEGE" ]
+            }
+        ]
+	}
+}

@@ -1,0 +1,8 @@
+{
+  "dev.db.data::DUMMY": {
+    "target": {
+      "object": "DUMMY",
+      "schema": "SYS"
+    }
+  }
+} 

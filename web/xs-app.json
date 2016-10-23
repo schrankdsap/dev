@@ -1,0 +1,6 @@
+{
+	"welcomeFile": "index.html",
+	"authenticationMethod": "route",
+	"routes": [{"source": "(.*)(.xsjs)", "destination":"nodejs", "authenticationType":"xsuaa"},
+			   {"source": "(.*)(.xsodata)", "destination":"nodejs", "authenticationType":"xsuaa"}]
+}

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="dev.db.models::PRODUCTS_TOP" applyPrivilegeType="NONE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="3.0" defaultClient="$$client$$" visibility="internal" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="PRODUCTS_TOP"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="dev.db.models::PRODUCTS_BASE">
+    <resourceUri>dev.db.models::PRODUCTS_BASE</resourceUri>
+  </DataSource>
+  <DataSource id="dev.db.data::MD.BusinessPartner">
+    <resourceUri>dev.db.data::MD.BusinessPartner</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="CATEGORY">
+        <descriptions defaultDescription="CATEGORY"/>
+      </viewAttribute>
+      <viewAttribute id="CURRENCY">
+        <descriptions defaultDescription="CURRENCY"/>
+      </viewAttribute>
+      <viewAttribute id="DEPTH">
+        <descriptions defaultDescription="DEPTH"/>
+      </viewAttribute>
+      <viewAttribute id="DESCID">
+        <descriptions defaultDescription="DESCID"/>
+      </viewAttribute>
+      <viewAttribute id="DIMENSIONUNIT">
+        <descriptions defaultDescription="DIMENSIONUNIT"/>
+      </viewAttribute>
+      <viewAttribute id="HEIGHT">
+        <descriptions defaultDescription="HEIGHT"/>
+      </viewAttribute>
+      <viewAttribute id="HISTORY_CHANGEDAT">
+        <descriptions defaultDescription="HISTORY_CHANGEDAT"/>
+      </viewAttribute>
+      <viewAttribute id="HISTORY_CHANGEDBY_EMPLOYEEID">
+        <descriptions defaultDescription="HISTORY_CHANGEDBY_EMPLOYEEID"/>
+      </viewAttribute>
+      <viewAttribute id="HISTORY_CREATEDAT">
+        <descriptions defaultDescription="HISTORY_CREATEDAT"/>
+      </viewAttribute>
+      <viewAttribute id="HISTORY_CREATEDBY_EMPLOYEEID">
+        <descriptions defaultDescription="HISTORY_CREATEDBY_EMPLOYEEID"/>
+      </viewAttribute>
+      <viewAttribute id="NAMEID">
+        <descriptions defaultDescription="NAMEID"/>
+      </viewAttribute>
+      <viewAttribute id="PRICE">
+        <descriptions defaultDescription="PRICE"/>
+      </viewAttribute>
+      <viewAttribute id="PRODUCTID">
+        <descriptions defaultDescription="PRODUCTID"/>
+      </viewAttribute>
+      <viewAttribute id="PRODUCTPICURL">
+        <descriptions defaultDescription="PRODUCTPICURL"/>
+      </viewAttribute>
+      <viewAttribute id="QUANTITYUNIT">
+        <descriptions defaultDescription="QUANTITYUNIT"/>
+      </viewAttribute>
+      <viewAttribute id="SUPPLIER_PARTNERID">
+        <descriptions defaultDescription="SUPPLIER_PARTNERID"/>
+      </viewAttribute>
+      <viewAttribute id="TAXTARIFFCODE">
+        <descriptions defaultDescription="TAXTARIFFCODE"/>
+      </viewAttribute>
+      <viewAttribute id="TYPECODE">
+        <descriptions defaultDescription="TYPECODE"/>
+      </viewAttribute>
+      <viewAttribute id="WEIGHTMEASURE">
+        <descriptions defaultDescription="WEIGHTMEASURE"/>
+      </viewAttribute>
+      <viewAttribute id="WEIGHTUNIT">
+        <descriptions defaultDescription="WEIGHTUNIT"/>
+      </viewAttribute>
+      <viewAttribute id="WIDTH">
+        <descriptions defaultDescription="WIDTH"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="dev.db.models::PRODUCTS_BASE">
+      <mapping xsi:type="Calculation:AttributeMapping" target="CATEGORY" source="CATEGORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DEPTH" source="DEPTH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DESCID" source="DESCID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DIMENSIONUNIT" source="DIMENSIONUNIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HEIGHT" source="HEIGHT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HISTORY_CHANGEDAT" source="HISTORY_CHANGEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HISTORY_CHANGEDBY_EMPLOYEEID" source="HISTORY_CHANGEDBY_EMPLOYEEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HISTORY_CREATEDAT" source="HISTORY_CREATEDAT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HISTORY_CREATEDBY_EMPLOYEEID" source="HISTORY_CREATEDBY_EMPLOYEEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAMEID" source="NAMEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRICE" source="PRICE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCTID" source="PRODUCTID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCTPICURL" source="PRODUCTPICURL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="QUANTITYUNIT" source="QUANTITYUNIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SUPPLIER_PARTNERID" source="SUPPLIER_PARTNERID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAXTARIFFCODE" source="TAXTARIFFCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TYPECODE" source="TYPECODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WEIGHTMEASURE" source="WEIGHTMEASURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WEIGHTUNIT" source="WEIGHTUNIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WIDTH" source="WIDTH"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" joinType="leftOuter">
+    <viewAttributes>
+      <viewAttribute id="CATEGORY">
+        <descriptions defaultDescription="CATEGORY"/>
+      </viewAttribute>
+      <viewAttribute id="CURRENCY">
+        <descriptions defaultDescription="CURRENCY"/>
+      </viewAttribute>
+      <viewAttribute id="DEPTH">
+        <descriptions defaultDescription="DEPTH"/>
+      </viewAttribute>
+      <viewAttribute id="DESCID">
+        <descriptions defaultDescription="DESCID"/>
+      </viewAttribute>
+      <viewAttribute id="DIMENSIONUNIT">
+        <descriptions defaultDescription="DIMENSIONUNIT"/>
+      </viewAttribute>
+      <viewAttribute id="HEIGHT">
+        <descriptions defaultDescription="HEIGHT"/>
+      </viewAttribute>
+      <viewAttribute id="HISTORY_CREATEDBY_EMPLOYEEID">
+        <descriptions defaultDescription="HISTORY_CREATEDBY_EMPLOYEEID"/>
+      </viewAttribute>
+      <viewAttribute id="NAMEID">
+        <descriptions defaultDescription="NAMEID"/>
+      </viewAttribute>
+      <viewAttribute id="PRICE">
+        <descriptions defaultDescription="PRICE"/>
+      </viewAttribute>
+      <viewAttribute id="PRODUCTID">
+        <descriptions defaultDescription="PRODUCTID"/>
+      </viewAttribute>
+      <viewAttribute id="PRODUCTPICURL">
+        <descriptions defaultDescription="PRODUCTPICURL"/>
+      </viewAttribute>
+      <viewAttribute id="SUPPLIER_PARTNERID">
+        <descriptions defaultDescription="SUPPLIER_PARTNERID"/>
+      </viewAttribute>
+      <viewAttribute id="TAXTARIFFCODE">
+        <descriptions defaultDescription="TAXTARIFFCODE"/>
+      </viewAttribute>
+      <viewAttribute id="TYPECODE">
+        <descriptions defaultDescription="TYPECODE"/>
+      </viewAttribute>
+      <viewAttribute id="WEIGHTMEASURE">
+        <descriptions defaultDescription="WEIGHTMEASURE"/>
+      </viewAttribute>
+      <viewAttribute id="WEIGHTUNIT">
+        <descriptions defaultDescription="WEIGHTUNIT"/>
+      </viewAttribute>
+      <viewAttribute id="WIDTH">
+        <descriptions defaultDescription="WIDTH"/>
+      </viewAttribute>
+      <viewAttribute id="WEBADDRESS">
+        <descriptions defaultDescription="WEBADDRESS"/>
+      </viewAttribute>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Projection_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="CATEGORY" source="CATEGORY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CURRENCY" source="CURRENCY"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DEPTH" source="DEPTH"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DESCID" source="DESCID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="DIMENSIONUNIT" source="DIMENSIONUNIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HEIGHT" source="HEIGHT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="HISTORY_CREATEDBY_EMPLOYEEID" source="HISTORY_CREATEDBY_EMPLOYEEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="NAMEID" source="NAMEID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRICE" source="PRICE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCTID" source="PRODUCTID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCTPICURL" source="PRODUCTPICURL"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="SUPPLIER_PARTNERID" source="SUPPLIER_PARTNERID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TAXTARIFFCODE" source="TAXTARIFFCODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="TYPECODE" source="TYPECODE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WEIGHTMEASURE" source="WEIGHTMEASURE"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WEIGHTUNIT" source="WEIGHTUNIT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="WIDTH" source="WIDTH"/>
+    </input>
+    <input node="dev.db.data::MD.BusinessPartner">
+      <mapping xsi:type="Calculation:AttributeMapping" target="WEBADDRESS" source="WEBADDRESS"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="PRODUCTID" source="PARTNERID"/>
+    </input>
+    <joinAttribute name="PRODUCTID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="CATEGORY" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CATEGORY"/>
+      <keyMapping columnObjectName="Join_1" columnName="CATEGORY"/>
+    </attribute>
+    <attribute id="CURRENCY" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CURRENCY"/>
+      <keyMapping columnObjectName="Join_1" columnName="CURRENCY"/>
+    </attribute>
+    <attribute id="DEPTH" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DEPTH"/>
+      <keyMapping columnObjectName="Join_1" columnName="DEPTH"/>
+    </attribute>
+    <attribute id="DESCID" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DESCID"/>
+      <keyMapping columnObjectName="Join_1" columnName="DESCID"/>
+    </attribute>
+    <attribute id="DIMENSIONUNIT" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DIMENSIONUNIT"/>
+      <keyMapping columnObjectName="Join_1" columnName="DIMENSIONUNIT"/>
+    </attribute>
+    <attribute id="HEIGHT" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HEIGHT"/>
+      <keyMapping columnObjectName="Join_1" columnName="HEIGHT"/>
+    </attribute>
+    <attribute id="HISTORY_CREATEDBY_EMPLOYEEID" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="HISTORY_CREATEDBY_EMPLOYEEID"/>
+      <keyMapping columnObjectName="Join_1" columnName="HISTORY_CREATEDBY_EMPLOYEEID"/>
+    </attribute>
+    <attribute id="NAMEID" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="NAMEID"/>
+      <keyMapping columnObjectName="Join_1" columnName="NAMEID"/>
+    </attribute>
+    <attribute id="PRICE" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRICE"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRICE"/>
+    </attribute>
+    <attribute id="PRODUCTID" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCTID"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRODUCTID"/>
+    </attribute>
+    <attribute id="PRODUCTPICURL" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="PRODUCTPICURL"/>
+      <keyMapping columnObjectName="Join_1" columnName="PRODUCTPICURL"/>
+    </attribute>
+    <attribute id="SUPPLIER_PARTNERID" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SUPPLIER_PARTNERID"/>
+      <keyMapping columnObjectName="Join_1" columnName="SUPPLIER_PARTNERID"/>
+    </attribute>
+    <attribute id="TAXTARIFFCODE" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TAXTARIFFCODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="TAXTARIFFCODE"/>
+    </attribute>
+    <attribute id="TYPECODE" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="TYPECODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="TYPECODE"/>
+    </attribute>
+    <attribute id="WEIGHTMEASURE" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WEIGHTMEASURE"/>
+      <keyMapping columnObjectName="Join_1" columnName="WEIGHTMEASURE"/>
+    </attribute>
+    <attribute id="WEIGHTUNIT" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WEIGHTUNIT"/>
+      <keyMapping columnObjectName="Join_1" columnName="WEIGHTUNIT"/>
+    </attribute>
+    <attribute id="WIDTH" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WIDTH"/>
+      <keyMapping columnObjectName="Join_1" columnName="WIDTH"/>
+    </attribute>
+    <attribute id="WEBADDRESS" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WEBADDRESS"/>
+      <keyMapping columnObjectName="Join_1" columnName="WEBADDRESS"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="17" y="287"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="108" y="199"/>
+      <rectangleSize height="30" width="140"/>
+    </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="34"/>
+      <rectangleSize width="275.6025390625"/>
+    </shape>
+    <shape modelObjectName="dev.db.data::MD.BusinessPartner" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="34"/>
+      <rectangleSize width="266.7666015625"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>
